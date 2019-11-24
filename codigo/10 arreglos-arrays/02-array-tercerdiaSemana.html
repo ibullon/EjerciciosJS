@@ -14,10 +14,19 @@
     */
 
 var diasSemana;
+var counter;
 
 diasSemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sábado","Domingo"];
 
-
+counter =0;
+while(counter <7)
+{
+    if (counter == 2 || counter ==4)
+    { document.write(diasSemana[counter]);
+      document.write("<br>");
+    }
+    counter=counter+1;
+}
 
 
 
