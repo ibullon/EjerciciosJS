@@ -24,6 +24,57 @@ Total a pagar:
 
     */
 
+        const precio_1_25 =27.7;
+        const precio_26_50 =25.5;
+        const precio_51_75 =23.5;
+        const precio_mayor_75 = 21.5;
+        const descuento_mas_de_50 = 0.15;
+        const descuento_menos_de_50 = 0.05;
+
+        let precio;
+        let total_pago;
+        let cantidad_comprada;
+        let descuento;
+        // ingreso de la cantidad a comprar
+
+        cantidad_comprada=prompt("Ingrese la cantidad a comprar: ");
+        cantidad_comprada=parseInt(cantidad_comprada);
+
+        // procesamiento de datos
+        if (cantidad_comprada<=25)
+        {
+            precio = precio_1_25;
+            descuento=descuento_menos_de_50;
+        }
+
+        if (cantidad_comprada>25 && cantidad_comprada <=50)
+        {
+            precio = precio_26_50;
+            descuento=descuento_menos_de_50;
+        }
+
+        if (cantidad_comprada>50 && cantidad_comprada <=75)
+        {
+            precio = precio_51_75;
+            descuento=descuento_mas_de_50;
+        }
+
+        if (cantidad_comprada>75)
+        {
+            precio = precio_mayor_75;
+            descuento=descuento_mas_de_50;
+        }
+
+        descuento = precio*cantidad_comprada*descuento;
+        total_pago = precio*cantidad_comprada-descuento;
+
+        document.write("El precio unitario es " +precio);
+        document.write("<br>");
+        document.write("Tiene un descuento de 15% igual a "+ descuento);
+        document.write("<br>");
+        document.write("El total a pagar es: " +total_pago);
+        document.write("<br>");
+
     </script>
 
 </head>

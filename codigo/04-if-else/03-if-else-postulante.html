@@ -17,9 +17,48 @@ Diseñe un programa que determine la categoría de un postulante.
 
     */
 
+// variables
+    let sexo;
+    let edad;
+    let categoria;
 
+// ingreso de numero
+    sexo = prompt("ingrese sexo Masculino M, Femenino F:");
+    
+    edad = prompt("Ingrese la edad: ");
+    edad = parseInt(edad);
 
-</script>
+//procesamiento
+    
+    sexo = sexo.toUpperCase();
+    categoria = "No entro al if";
+    
+    if (sexo=="M")
+    {
+        categoria = "M";
+    }
+    else
+    {
+        categoria = "F";
+    }
+
+    document.write("La categoria es: " +categoria);
+    document.write("<br>");
+
+    if (edad <23)
+    {
+        categoria = categoria + "A";
+    }
+    else
+    {
+        categoria = categoria + "B";
+    }
+
+// mostrar resultados
+    document.write("La categoria es: " +categoria);
+    document.write("<br>");
+
+   </script>
 
 </head>
 <body>

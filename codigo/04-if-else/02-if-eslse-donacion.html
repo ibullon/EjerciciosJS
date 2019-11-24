@@ -19,15 +19,40 @@ La institución desea saber cuanto de dinero destinará a cada rubro anualmente.
 
 */
 
-    //declarar variables
+// variables
+    let num1;
+    let num2;
 
+// ingreso de numero
+    num1 = prompt("ingrese monto de donación:");
+    num1 = parseInt(num1);
 
-    //ingreso datos
+//procesamiento
+    if (num1>10000)
+    {
+        centro_salud=0.3*num1;
+        comedor= 0.5*num1;
+        num1= num1-centro_salud-comedor;
+    }
+    else
+    {
+        centro_salud=0.25*num1;
+        comedor= 0.6*num1;
+        num1= num1-centro_salud-comedor;       
+    }
 
+// mostrar resultados
+    document.write("La distribución de la donacion es:");
+    document.write("<br>");
 
+    document.write("- Centro de Salud:      " +centro_salud);
+    document.write("<br>");
 
-    //procesamiento
+    document.write("- Comedor:              " +comedor);
+    document.write("<br>");
 
+    document.write("- Bolsa de inversion:   " +num1);
+    document.write("<br>");
 
 </script>
 

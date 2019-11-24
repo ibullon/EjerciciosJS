@@ -19,20 +19,30 @@ información:
     */
 
     //declarar varibles
-
-
-
+    let centimetros;
+    let pulgadas;
+    let pies;
+    let yarda;
+    let num1;
+        
     //ingreso datos
-
-
+    num1 = prompt("ingresa la medida en metros");
+    num1 = parseInt(num1);
 
     //procesamiento
-
-
-
+    centimetros = num1*100;
+    pulgadas = centimetros/2.54;
+    pies = centimetros/12;
+    yarda = centimetros/3;
 
     //salida datos
-
+    document.write("la cantidad en centimetros es: " + centimetros);
+    document.write("<br>");
+    document.write("la cantidad en pulgadas es: " + pulgadas);
+    document.write("<br>");
+    document.write("la cantidad en pies es: " + pies);
+    document.write("<br>");
+    document.write("la cantidad en yardas es: " + yarda);
 
     </script>
 

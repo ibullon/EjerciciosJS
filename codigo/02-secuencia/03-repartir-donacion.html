@@ -19,9 +19,30 @@ forma:
 
 */
 
+let Pediatria
+let General
+let Ginecologia
+let Traumatologia
+let num1;
 
+ //ingreso datos
+num1 = prompt("ingrese el monto de la donación:");
+num1 = parseInt(num1);
 
+//procesamiento
+General = 0.45*num1;
+Ginecologia = 0.3*num1;
+Pediatria = 0.2*(General + Ginecologia);
+Traumatologia = num1-General-Ginecologia-Pediatria;
 
+//salida datos
+document.write("la cantidad de la donacion para Medicina General es: " + General);
+document.write("<br>");
+document.write("la cantidad de la donacion para Ginecologia es: " + Ginecologia);
+document.write("<br>");
+document.write("la cantidad de la donacion para Pediatria es: " + Pediatria);
+document.write("<br>");
+document.write("la cantidad de la donacion para Traumatologia es: " + Traumatologia);
 
 
 </script>
